@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Monte da Galiza</title>
+    <script>
+        // Get browser language
+        const userLang = navigator.language || navigator.userLanguage;
+        
+        // Determine redirect based on browser language
+        let redirect = 'pt/'; // Remove the leading slash for local development
+        
+        if (userLang.startsWith('en')) {
+            redirect = 'en/';
+        } else if (userLang.startsWith('fr')) {
+            redirect = 'fr/';
+        }
+        
+        // Add console log to debug
+        console.log('Redirecting to:', redirect);
+        
+        // Redirect to appropriate language version
+        window.location.href = redirect;
+    </script>
+</head>
+<body>
+    <!-- Add some basic styling to show the loading message -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        p {
+            padding: 20px;
+        }
+    </style>
+    <p>Redirecting...</p>
+</body>
+</html>
