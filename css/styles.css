@@ -192,6 +192,7 @@ body {
     font-size: 13px;
     text-decoration: none;
     color: #333;
+    text-transform: uppercase;
 }
 
 .footer-logo {
@@ -275,7 +276,6 @@ section .grid-container {
     align-items: center;
     justify-content: center;
     z-index: 3;
-    margin-top: -120px;
 }
 
 /* Ensure the content stays visible */
@@ -621,7 +621,6 @@ body {
 
 main {
     background-color: var(--stoic-white);
-    margin-top: 120px;
     min-height: calc(100vh - 130px);
     position: relative;
     z-index: 1;
@@ -700,6 +699,9 @@ main {
     width: 100%;
     padding: 0;
     margin: 0;
+    border-top: 1px solid #333;
+    min-height: 100vh;
+    height: auto;
 }
 
 .prices-section .grid-container {
@@ -708,15 +710,16 @@ main {
     align-items: center;
     max-width: 1800px;
     margin: 0 auto;
-    padding: 0 240px;
+    padding: 80px 40px 0px 40px;
     width: 100%;
+    gap: 40px;
 }
 
 .prices-image {
-    width: 83.33%;
     margin-bottom: 4rem;
     display: flex;
     justify-content: center;
+    max-height: 80vh;
 }
 
 .prices-image img {
@@ -747,7 +750,7 @@ main {
 
 .prices-subtitle {
     font-family: var(--font-secondary);
-    font-weight: 300;
+    font-weight: 600;
     font-size: 1.2rem;
     color: #333;
     margin: 0;
@@ -756,7 +759,7 @@ main {
 
 .prices-intro {
     max-width: 800px;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .prices-intro p {
@@ -812,16 +815,17 @@ main {
 
 .booking-btn {
     font-family: var(--font-secondary);
-    font-weight: 300;
+    font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
-    color: #333;
+    color: #fff !important;
     padding: 1rem 2rem;
-    background-color: var(--vanilla-tan);
+    background-color: var(--sandstone);
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 .booking-btn:hover {
     background-color: var(--sandstone);
+    filter: brightness(0.98);
 }
