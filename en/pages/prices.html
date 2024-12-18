@@ -7,28 +7,45 @@
     <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
-    <header class="main-header">
-        <nav class="nav-container">
-          <div class="left-menu">
-            <a href="pages/about.html">ABOUT</a>
-            <a href="pages/houses.html">HOUSES</a>
-            <a href="pages/prices.html">PRICES</a>
-            <a href="pages/contact.html">CONTACT</a>
-          </div>
-  
-          <div class="logo">
-            <img
-              src="/images/logo/Monte-da-galiza-logo.png"
-              alt="Monte da Galiza Logo"
-            />
-          </div>
-  
-          <div class="right-menu">
-            <a href="#" class="lagoa-link">LAGOA DE SANTO ANDRÉ</a>
-            <a href="#" class="booking-btn">BOOKING</a>
-          </div>
-        </nav>
-      </header>
+  <header class="main-header">
+    <nav class="nav-container">
+      <div class="left-menu">
+        <a href="/en/pages/about.html">ABOUT</a>
+        <a href="/en/pages/houses.html">HOUSES</a>
+        <a href="/en/pages/prices.html">PRICES</a>
+        <a href="/en/pages/contact.html">CONTACT</a>
+      </div>
+
+      <a class="logo" href="/en/index.html">
+        <img
+          src="/images/logo/Monte-da-galiza-logo.png"
+          alt="Monte da Galiza Logo"
+        />
+      </a>
+
+      <div class="right-menu">
+        <a href="/en/pages/lagoa.html" class="lagoa-link">LAGOA DE SANTO ANDRÉ</a>
+        <a href="#" class="booking-btn">BOOKING</a>
+      </div>
+
+      <div class="burger-menu" id="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="fullscreen-nav" id="fullscreen-nav">
+      <p class="close-nav" id="close-nav">&times;</p> <!-- Close Button -->
+      <nav class="mobile-nav">
+        <a href="/en/pages/about.html">ABOUT</a>
+        <a href="/en/pages/houses.html">HOUSES</a>
+        <a href="/en/pages/prices.html">PRICES</a>
+        <a href="/en/pages/contact.html">CONTACT</a>
+        <a href="/en/pages/lagoa.html" class="lagoa-link">LAGOA DE SANTO ANDRÉ</a>
+        <a href="#" class="booking-btn">BOOKING</a>
+      </nav>
+    </div>      
+  </header>
 
     <main>
         <section class="prices-section">
@@ -151,16 +168,6 @@
                     alt="Instagram post 7"
                   />
                 </a>
-                <a
-                  href="https://www.instagram.com/montedagaliza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank"
-                  class="instagram-item"
-                >
-                  <img
-                    src="/images/instagram/post2.png"
-                    alt="Instagram post 8"
-                  />
-                </a>
               </div>
             </div>
           </div>
@@ -181,7 +188,7 @@
           <div class="footer-logo">
             <img
               loading="lazy"
-              src="/images/logo/Monte-da-galiza-logo.png"
+              src="/images/logo/Sub_logo_tp.png"
               alt="Monte da Galiza Logo"
             />
           </div>
@@ -204,5 +211,22 @@
             });
         });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const burgerMenu = document.getElementById('burger-menu');
+        const fullscreenNav = document.getElementById('fullscreen-nav');
+        const closeNav = document.getElementById('close-nav'); // Close Button
+    
+        // Open the fullscreen navigation
+        burgerMenu.addEventListener('click', () => {
+          fullscreenNav.classList.add('open');
+        });
+    
+        // Close the fullscreen navigation
+        closeNav.addEventListener('click', () => {
+          fullscreenNav.classList.remove('open');
+        });
+      });
+    </script>    
 </body>
 </html>
